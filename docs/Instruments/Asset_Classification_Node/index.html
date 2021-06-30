@@ -19,6 +19,7 @@ The Asset_Classification_Node table holds the node of the asset group hierarchy,
 <tr><td><code>Regime</code></td><td>(<code>Regime</code>)</td><td>Asset_Classification_Regime (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
 <tr><td><code>NodeBenchmark</code></td><td>(<code>Benchmark</code>)</td><td><code>Benchmark</code> (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
 <tr><td></td></tr>
+<tr><td>CREATE INDEX</td><td>ON</td><td>ASC</td><td>VISIBLE</td><td>.</td></tr>
 <tr><td><code>Regime_idx</code></td><td>Asset_Classification_Node</td><td>(<code>Regime</code> ASC)</td><td>VISIBLE</td><td>.</td></tr>
 <tr><td><code>Benchmark_idx</code></td><td>Asset_Classification_Node</td><td>(<code>Benchmark</code> ASC)</td><td>VISIBLE</td><td>.</td></tr>
 <tr><td></td></tr>
