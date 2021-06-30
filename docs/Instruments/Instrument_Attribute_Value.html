@@ -10,16 +10,16 @@ This table serves to hold the values of the attributes for each individual instr
 <tr><td></td></tr>
 <tr><td><code>id</code></td><td>BIGINT(12)</td><td>PK, NN</td><td>1</td><td>PrimaryKey-ID, Not Null (auto creates)</td></tr>
 <tr><td><code>Value</code></td><td>VARCHAR(45)</td><td>NULL</td><td>e.g: US2058871029, TRE.MC, 6178, OMFSPF, AA</td><td>Value of the attribute</td></tr>
-<tr><td><code>Instrument_Attribut</code></td><td>BIGINT(12)</td><td>NULL</td><td>1</td><td>Id from Instrument_Attribute_Definition for the specific attribute.</td></tr>
+<tr><td><code>Instrument_Attribute</code></td><td>BIGINT(12)</td><td>NULL</td><td>1</td><td>Id from Instrument_Attribute_Definition for the specific attribute.</td></tr>
 <tr><td><code>Instrument</code></td><td>BIGINT(12)</td><td>NULL</td><td>1</td><td>Instrument ID from the Instrument table for the specific instrument. NB! There are no constraints to enforce referential integrity across Instrument and Instrument_Attribute tables. This allows duplicate Instruments to be created. We recommend the user to establish operational process or naming conventions to minimize issues resulting from duplicates.</td></tr>
 <tr><td></td></tr>
 <tr><td>CONSTRAINT</td><td>FOREIGN KEY</td><td>REFERENCES</td><td>ON DELETE</td><td>ON UPDATE</td></tr>
-<tr><td><code>ValueInstrument_Attribute</code></td><td>(<code>Instrument_Attribut</code>)</td><td><code>Instrument__Attribute_Definition</code> (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
+<tr><td><code>ValueInstrument_Attribute</code></td><td>(<code>Instrument_Attribut</code>)</td><td><code>Instrument_Attribute_ Definition</code> (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
 <tr><td><code>ValueInstrument</code></td><td>(<code>Instrument</code>)</td><td><code>Instrument</code> (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
 <tr><td></td></tr>
-<tr><td>CREATE INDEX</td><td>ON</td><td>ASC</td><td>VISABLE</td><td>.</td></tr>
-<tr><td><code>Instrument_Attribute_idx</code></td><td><code>Instrument__Attribute_Value</code></td><td>(<code>Instrument_Attribut</code> ASC)</td><td>VISIBLE</td><td>.</td></tr>
-<tr><td><code>Instrument_idx</code></td><td><code>Instrument__Attribute_Value</code></td><td>(<code>Instrument</code> ASC)</td><td>VISIBLE</td><td>.</td></tr>
+<tr><td>CREATE INDEX</td><td>ON</td><td>ASC</td><td>VISIBLE</td><td>.</td></tr>
+<tr><td><code>Instrument_Attribute_idx</code></td><td><code>Instrument_Attribute_ Value</code></td><td>(<code>Instrument_Attribute</code> ASC)</td><td>VISIBLE</td><td>.</td></tr>
+<tr><td><code>Instrument_idx</code></td><td><code>Instrument_Attribute_ Value</code></td><td>(<code>Instrument</code> ASC)</td><td>VISIBLE</td><td>.</td></tr>
 <tr><td></td></tr>
 </tbody>
 </table>
