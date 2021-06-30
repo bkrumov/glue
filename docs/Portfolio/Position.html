@@ -19,14 +19,14 @@
 <tr><td><code>purchase_datetime</code></td><td>DATETIME(3)</td><td>NOT NULL</td><td>1/1/2020  12:30:00 PM</td><td>Date when the instrument was purchased</td></tr>
 <tr><td><code>close_datetime</code></td><td>DATETIME(3)</td><td>NOT NULL</td><td>12/31/9999  12:30:00 PM</td><td>Date when the Position is closed. If not closed - default value is '12/31/9999'</td></tr>
 <tr><td><code>market_value_datetime</code></td><td>DATETIME(3)</td><td>NOT NULL</td><td>1/1/2020  12:30:00 PM</td><td>Date when the market value of the position has been updated from the Price table.</td></tr>
-<tr><td><code>market_value_percentage_modifiable</code></td><td>TINYINT</td><td>NOT NULL</td><td>1</td><td>Flag whether the market value percentage is modifiable. Determines whether user (client advisor) can modify position share (in percentages) and trigger a new proposal/trade or not.</td></tr>
+<tr><td><code>market_value_ percentage_modifiable</code></td><td>TINYINT</td><td>NOT NULL</td><td>1</td><td>Flag whether the market value percentage is modifiable. Determines whether user (client advisor) can modify position share (in percentages) and trigger a new proposal/trade or not.</td></tr>
 <tr><td></td></tr>
 <tr><td>CONSTRAINT</td><td>FOREIGN KEY</td><td>REFERENCES</td><td>ON DELETE</td><td>ON UPDATE</td></tr>
 <tr><td><code>currency_id</code></td><td>(<code>currency_id</code>)</td><td><code>Currency</code> (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
 <tr><td><code>financial_account</code></td><td>(<code>financial_account_id</code>)</td><td><code>Financial_Account</code> (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
 <tr><td><code>Instrument</code></td><td>(<code>instrument_id</code>)</td><td><code>Instrument</code> (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
 <tr><td></td></tr>
-<tr><td>CREATE INDEX</td><td>ON</td><td>ASC</td><td>VISABLE</td><td>.</td></tr>
+<tr><td>CREATE INDEX</td><td>ON</td><td>ASC</td><td>VISIBLE</td><td>.</td></tr>
 <tr><td><code>currency_id_idx</code></td><td><code>Position</code></td><td>(<code>currency_id</code> ASC)</td><td>VISIBLE</td><td>.</td></tr>
 <tr><td><code>financial_account_idx</code></td><td><code>Position</code></td><td>(<code>financial_account_id</code> ASC)</td><td>VISIBLE</td><td>.</td></tr>
 <tr><td><code>Instrument_idx</code></td><td><code>Position</code></td><td>(<code>instrument_id</code> ASC)</td><td>VISIBLE</td><td>.</td></tr>
