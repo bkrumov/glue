@@ -14,7 +14,7 @@ This table serves to hold the values of the attributes for each individual instr
 <tr><td><code>Instrument</code></td><td>BIGINT(12)</td><td>NULL</td><td>1</td><td>Instrument ID from the Instrument table for the specific instrument. NB! There are no constraints to enforce referential integrity across Instrument and Instrument_Attribute tables. This allows duplicate Instruments to be created. We recommend the user to establish operational process or naming conventions to minimize issues resulting from duplicates.</td></tr>
 <tr><td></td></tr>
 <tr><td>CONSTRAINT</td><td>FOREIGN KEY</td><td>REFERENCES</td><td>ON DELETE</td><td>ON UPDATE</td></tr>
-<tr><td><code>ValueInstrument_Attribute</code></td><td>(<code>Instrument_Attribut</code>)</td><td><code>Instrument_Attribute_ Definition</code> (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
+<tr><td><code>ValueInstrument_Attribute</code></td><td>(<code>Instrument_Attribute</code>)</td><td><code>Instrument_Attribute_ Definition</code> (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
 <tr><td><code>ValueInstrument</code></td><td>(<code>Instrument</code>)</td><td><code>Instrument</code> (<code>id</code>)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
 <tr><td></td></tr>
 <tr><td>CREATE INDEX</td><td>ON</td><td>ASC</td><td>VISIBLE</td><td>.</td></tr>
